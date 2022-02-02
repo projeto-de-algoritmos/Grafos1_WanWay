@@ -1,7 +1,9 @@
+import Map from '../assets/map.svg'
+
 function App() {
   return (
     <div className="App">
-      Hello World!
+      <img src={Map} alt="Map" />
     </div>
   );
 }
