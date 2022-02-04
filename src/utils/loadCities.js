@@ -1,12 +1,17 @@
 const networkGraph = require("../data/graph.json");
 
 export const loadCities = () => {
-    const cities = []
+  const cities = [];
 
-    networkGraph.forEach(obj => {
-        if(obj.router != null){
-            cities.push(obj.name)
-        }
-    })
-    return cities.sort()
-}
+  networkGraph.forEach((obj) => {
+    if (obj.router != null) {
+      cities.push({
+        id: obj.id,
+        name: `${networkGraph[obj.router].name} - ${obj.name}`,
+      });
+    }
+  });
+  return cities.sort(function (a, b) {
+    return a.name.localeCompare(b.name)
+  });
+};

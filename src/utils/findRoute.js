@@ -2,7 +2,7 @@ const networkGraph = require("../data/graph.json");
 
 let nodeParents = new Array(26);
 
-const BFS = (startLAN, endLAN) => {
+export const findRouteBFS = (startLAN, endLAN) => {
   const queue = [];
   const visited = [];
   const startNODE = networkGraph[startLAN].router;
@@ -15,14 +15,13 @@ const BFS = (startLAN, endLAN) => {
   while (queue.length > 0) {
     let visiting = queue.shift();
 
-    if (visiting.connectedLAN.find((el) => endLAN == el) != undefined) {
+    if (visiting.connectedLAN.find((el) => endLAN === el) !== undefined) {
       nodeParents[endLAN] = visiting.id;
-      showPath(startLAN, endLAN);
-      break;
+      return showPath(startLAN, endLAN);
     }
 
     visiting.connectedWAN.forEach((indexNeighbor) => {
-      if (visited.find((el) => el == indexNeighbor) == undefined) {
+      if (visited.find((el) => el === indexNeighbor) === undefined) {
         visited.push(indexNeighbor);
         queue.push(networkGraph[indexNeighbor]);
         nodeParents[indexNeighbor] = visiting.id;
@@ -36,13 +35,13 @@ const BFS = (startLAN, endLAN) => {
 const showPath = (startLAN, endLAN) => {
   const path = [];
   let nodeParent = networkGraph[endLAN].id;
-  while (nodeParent != startLAN) {
+  while (nodeParent !== startLAN) {
     path.unshift(networkGraph[nodeParent].name);
     nodeParent = nodeParents[nodeParent];
   }
   path.unshift(networkGraph[nodeParent].name);
 
-  console.log(path);
+  return path;
 };
 
 // BFS(41, 76);
