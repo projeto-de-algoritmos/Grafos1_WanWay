@@ -30,7 +30,14 @@ function App() {
   };
 
   const handlePesquisa = () => {
-    setRota(findRouteBFS(redeInicial, redeFinal).map((el) => `${el} -> `));
+    const rotaEncontrada = findRouteBFS(redeInicial, redeFinal)
+    let resultado = ""
+
+    resultado += `${rotaEncontrada[0]} `
+    for (let aux = 1; aux < rotaEncontrada.length; aux++)
+      resultado += `► ${rotaEncontrada[aux]}`
+
+    setRota(resultado);
   };
 
   return (
@@ -69,7 +76,6 @@ function App() {
             </Typography>
             <Autocomplete
               disablePortal
-              id="combo-box-demo"
               options={cities}
               getOptionLabel={(cities) => cities.name}
               sx={{ marginTop: "10%", width: "80%" }}
@@ -80,7 +86,6 @@ function App() {
             />
             <Autocomplete
               disablePortal
-              id="combo-box-demo"
               options={cities}
               getOptionLabel={(cities) => cities.name}
               sx={{ marginTop: "10%", width: "80%" }}
@@ -145,7 +150,7 @@ function App() {
                   component="div"
                   sx={{
                     fontSize: 18,
-                    height: "100%",
+                    height: "fill-available",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
