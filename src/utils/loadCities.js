@@ -11,5 +11,7 @@ export const loadCities = () => {
       });
     }
   });
-  return cities.sort();
+  return cities.sort(function (a, b) {
+    return a.name.localeCompare(b.name)
+  });
 };
