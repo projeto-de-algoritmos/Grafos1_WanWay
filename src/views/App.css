@@ -1,0 +1,38 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.appPage {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20vw auto;
+}
+
+.appBar{
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+    background-color: lightblue;
+}
+
+.appBar #startLAN{
+    margin-top: 30vh;
+}
+
+.container{
+    background-color: lawngreen;
+    grid-column-start: 2;
+    height: 100%;
+}
+
+.imageMap{
+    background-color: blueviolet;
+    margin-left: 10vw;
+}
