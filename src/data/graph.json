@@ -1,239 +1,600 @@
 [
     {
         "id": 0,
-        "name": "AM1",
+        "name": "RR1",
         "connectedWAN": [
-            1,
             3
         ],
-        "connectedLAN": [
-            12,
-            13
-        ]
+        "connectedLAN": [41]
     },
     {
         "id": 1,
-        "name": "AM2",
+        "name": "AM1",
         "connectedWAN": [
-            0,
-            1
+            2,
+            4,
+            5,
+            9
         ],
-        "connectedLAN": [
-            14
-        ]
+        "connectedLAN": [42]
     },
     {
         "id": 2,
-        "name": "AM3",
+        "name": "AM2",
         "connectedWAN": [
             1,
             3
         ],
-        "connectedLAN": [
-            15,
-            16
-        ]
+        "connectedLAN": [43]
     },
     {
         "id": 3,
-        "name": "AM4",
+        "name": "AM3",
         "connectedWAN": [
             0,
             2,
-            8
+            6,
+            9
         ],
-        "connectedLAN": [
-            17,
-            18
-        ]
+        "connectedLAN": [44]
     },
     {
         "id": 4,
-        "name": "AM5",
+        "name": "AC1",
         "connectedWAN": [
-            2,
-            5,
-            6,
-            8
+            1
         ],
-        "connectedLAN": [
-            19
-        ]
+        "connectedLAN": [45]
     },
     {
         "id": 5,
-        "name": "PA1",
+        "name": "RO1",
         "connectedWAN": [
-            4,
-            6
+            1,
+            24
         ],
-        "connectedLAN": [
-            20
-        ]
+        "connectedLAN": [45]
     },
     {
         "id": 6,
-        "name": "PA2",
+        "name": "PA1",
         "connectedWAN": [
-            4,
-            5,
+            3,
             7,
-            8
+            10
         ],
-        "connectedLAN": [
-            21
-        ]
+        "connectedLAN": [47]
     },
     {
         "id": 7,
-        "name": "PA3",
+        "name": "PA2",
         "connectedWAN": [
-            6
+            6,
+            8,
+            9,
+            25
         ],
-        "connectedLAN": [
-            22
-        ]
+        "connectedLAN": [48]
     },
     {
         "id": 8,
-        "name": "PA4",
+        "name": "PA3",
         "connectedWAN": [
-            3,
-            4,
-            6,
-            9
-        ],
-        "connectedLAN": [
-            23
-        ]
-    },
-    {
-        "id": 9,
-        "name": "MT1",
-        "connectedWAN": [
-            8,
+            7,
             10,
             11
         ],
-        "connectedLAN": [
+        "connectedLAN": [49]
+    },
+    {
+        "id": 9,
+        "name": "PA4",
+        "connectedWAN": [
+            1,
+            3,
+            7,
             24
-        ]
+        ],
+        "connectedLAN": [50]
     },
     {
         "id": 10,
-        "name": "MT2",
+        "name": "AP1",
         "connectedWAN": [
             6,
-            9
+            8
         ],
-        "connectedLAN": [
-            25
-        ]
+        "connectedLAN": [51]
     },
     {
         "id": 11,
-        "name": "MT3",
+        "name": "MA1",
         "connectedWAN": [
-            9
+            8,
+            12,
+            13
         ],
-        "connectedLAN": []
+        "connectedLAN": [52]
     },
     {
         "id": 12,
-        "name": "Ipixuna",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 0
+        "name": "MA2",
+        "connectedWAN": [
+            11,
+            14
+        ],
+        "connectedLAN": [53]
     },
     {
         "id": 13,
-        "name": "Mapiá",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 0
+        "name": "PI1",
+        "connectedWAN": [
+            11,
+            15
+        ],
+        "connectedLAN": [54]
     },
     {
         "id": 14,
-        "name": "Barreira",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 1
+        "name": "PI2",
+        "connectedWAN": [
+            12,
+            23
+        ],
+        "connectedLAN": [55]
     },
     {
         "id": 15,
-        "name": "Joca",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 2
+        "name": "CE1",
+        "connectedWAN": [
+            13,
+            16,
+            18
+        ],
+        "connectedLAN": [56]
     },
     {
         "id": 16,
-        "name": "Manaus",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 2
+        "name": "RN1",
+        "connectedWAN": [
+            15,
+            17
+        ],
+        "connectedLAN": [57]
     },
     {
         "id": 17,
-        "name": "Torrado",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 3
+        "name": "PB1",
+        "connectedWAN": [
+            16,
+            19
+        ],
+        "connectedLAN": [58]
     },
     {
         "id": 18,
-        "name": "Aripuana",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 3
+        "name": "PE1",
+        "connectedWAN": [
+            15,
+            19,
+            20,
+            22
+        ],
+        "connectedLAN": [59]
     },
     {
         "id": 19,
-        "name": "Babacal",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 4
+        "name": "AL1",
+        "connectedWAN": [
+            17,
+            18
+        ],
+        "connectedLAN": [60]
     },
     {
         "id": 20,
-        "name": "Curuá",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 5
+        "name": "SE1",
+        "connectedWAN": [
+            18
+        ],
+        "connectedLAN": [61]
     },
     {
         "id": 21,
-        "name": "Marabá",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 6
+        "name": "BA1",
+        "connectedWAN": [
+            22,
+            23,
+            30
+        ],
+        "connectedLAN": [62]
     },
     {
         "id": 22,
-        "name": "Paragominas",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 7
+        "name": "BA2",
+        "connectedWAN": [
+            18,
+            21
+        ],
+        "connectedLAN": [63]
     },
     {
         "id": 23,
-        "name": "Panará",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 8
+        "name": "TO1",
+        "connectedWAN": [
+            14,
+            21,
+            27
+        ],
+        "connectedLAN": [64]
     },
     {
         "id": 24,
-        "name": "Jauru",
-        "connectedWAN": [],
-        "connectedLAN": [],
-        "router": 9
+        "name": "MT1",
+        "connectedWAN": [
+            5,
+            9,
+            25,
+            26
+        ],
+        "connectedLAN": [65]
     },
     {
         "id": 25,
-        "name": "Ipê",
-        "connectedWAN": [],
-        "connectedLAN": [],
+        "name": "MT2",
+        "connectedWAN": [
+            7,
+            24,
+            27
+        ],
+        "connectedLAN": [66]
+    },
+    {
+        "id": 26,
+        "name": "MT3",
+        "connectedWAN": [
+            24,
+            34
+        ],
+        "connectedLAN": [67]
+    },
+    {
+        "id": 27,
+        "name": "GO1",
+        "connectedWAN": [
+            23,
+            25,
+            28
+        ],
+        "connectedLAN": [68]
+    },
+    {
+        "id": 28,
+        "name": "GO2",
+        "connectedWAN": [
+            27,
+            29,
+            34,
+            36
+        ],
+        "connectedLAN": [69]
+    },
+    {
+        "id": 29,
+        "name": "DF1",
+        "connectedWAN": [
+            28,
+            30
+        ],
+        "connectedLAN": [70]
+    },
+    {
+        "id": 30,
+        "name": "MG1",
+        "connectedWAN": [
+            21,
+            29,
+            31,
+            32
+        ],
+        "connectedLAN": [71]
+    },
+    {
+        "id": 31,
+        "name": "MG2",
+        "connectedWAN": [
+            30,
+            33,
+            37
+        ],
+        "connectedLAN": [72]
+    },
+    {
+        "id": 32,
+        "name": "ES1",
+        "connectedWAN": [
+            30,
+            33
+        ],
+        "connectedLAN": [73]
+    },
+    {
+        "id": 33,
+        "name": "RJ1",
+        "connectedWAN": [
+            31,
+            32
+        ],
+        "connectedLAN": [74]
+    },
+    {
+        "id": 34,
+        "name": "MS1",
+        "connectedWAN": [
+            26,
+            28,
+            35
+        ],
+        "connectedLAN": [75]
+    },
+    {
+        "id": 35,
+        "name": "MS2",
+        "connectedWAN": [
+            34,
+            38
+        ],
+        "connectedLAN": [76]
+    },
+    {
+        "id": 36,
+        "name": "SP1",
+        "connectedWAN": [
+            28,
+            37
+        ],
+        "connectedLAN": [77]
+    },
+    {
+        "id": 37,
+        "name": "SP2",
+        "connectedWAN": [
+            31,
+            36,
+            39
+        ],
+        "connectedLAN": [78]
+    },
+    {
+        "id": 38,
+        "name": "PR1",
+        "connectedWAN": [
+            35,
+            39,
+            40
+        ],
+        "connectedLAN": [79]
+    },
+    {
+        "id": 39,
+        "name": "SC1",
+        "connectedWAN": [
+            37,
+            38
+        ],
+        "connectedLAN": [80]
+    },
+    {
+        "id": 40,
+        "name": "RS1",
+        "connectedWAN": [
+            38
+        ],
+        "connectedLAN": [81]
+    },
+    {
+        "id": 41,
+        "name": "Boa Vista",
+        "router": 0
+    },
+    {
+        "id": 42,
+        "name": "Ipixuna",
+        "router": 1
+    },
+    {
+        "id": 43,
+        "name": "Barreira",
+        "router": 2
+    },
+    {
+        "id": 44,
+        "name": "Babacal",
+        "router": 3
+    },
+    {
+        "id": 45,
+        "name": "Rio Branco",
+        "router": 4
+    },
+    {
+        "id": 46,
+        "name": "Cacoal",
+        "router": 5
+    },
+    {
+        "id": 47,
+        "name": "Curuá",
+        "router": 6
+    },
+    {
+        "id": 48,
+        "name": "Marabá",
+        "router": 7
+    },
+    {
+        "id": 49,
+        "name": "Paragominas",
+        "router": 8
+    },
+    {
+        "id": 50,
+        "name": "Panará",
+        "router": 9
+    },
+    {
+        "id": 51,
+        "name": "Macapá",
         "router": 10
+    },
+    {
+        "id": 52,
+        "name": "Chapadinha",
+        "router": 11
+    },
+    {
+        "id": 53,
+        "name": "Riachão",
+        "router": 12
+    },
+    {
+        "id": 54,
+        "name": "Picos",
+        "router": 13
+    },
+    {
+        "id": 55,
+        "name": "Brejo",
+        "router": 14
+    },
+    {
+        "id": 56,
+        "name": "Iguatu",
+        "router": 15
+    },
+    {
+        "id": 57,
+        "name": "Natal",
+        "router": 16
+    },
+    {
+        "id": 58,
+        "name": "Cajazeiras",
+        "router": 17
+    },
+    {
+        "id": 59,
+        "name": "Trindade",
+        "router": 18
+    },
+    {
+        "id": 60,
+        "name": "Camarão",
+        "router": 19
+    },
+    {
+        "id": 61,
+        "name": "Lagarto",
+        "router": 20
+    },
+    {
+        "id": 62,
+        "name": "Correntina",
+        "router": 21
+    },
+    {
+        "id": 63,
+        "name": "Itaberaba",
+        "router": 22
+    },
+    {
+        "id": 64,
+        "name": "Bonfim",
+        "router": 23
+    },
+    {
+        "id": 65,
+        "name": "Jauru",
+        "router": 24
+    },
+    {
+        "id": 66,
+        "name": "Ipê",
+        "router": 25
+    },
+    {
+        "id": 67,
+        "name": "Itiquira",
+        "router": 26
+    },
+    {
+        "id": 68,
+        "name": "Minaçu",
+        "router": 27
+    },
+    {
+        "id": 69,
+        "name": "Caldas Novas",
+        "router": 28
+    },
+    {
+        "id": 70,
+        "name": "Brasília",
+        "router": 29
+    },
+    {
+        "id": 71,
+        "name": "Montes Claros",
+        "router": 30
+    },
+    {
+        "id": 72,
+        "name": "Patos de Minas",
+        "router": 31
+    },
+    {
+        "id": 73,
+        "name": "Castelo",
+        "router": 32
+    },
+    {
+        "id": 74,
+        "name": "Petrópolis",
+        "router": 33
+    },
+    {
+        "id": 75,
+        "name": "Miranda",
+        "router": 34
+    },
+    {
+        "id": 76,
+        "name": "Recreio",
+        "router": 35
+    },
+    {
+        "id": 77,
+        "name": "Bauru",
+        "router": 36
+    },
+    {
+        "id": 78,
+        "name": "Leme",
+        "router": 37
+    },
+    {
+        "id": 79,
+        "name": "Cascavel",
+        "router": 38
+    },
+    {
+        "id": 80,
+        "name": "Catanduvas",
+        "router": 39
+    },
+    {
+        "id": 81,
+        "name": "Pelotas",
+        "router": 40
     }
 ]
