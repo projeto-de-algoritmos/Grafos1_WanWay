@@ -47,7 +47,7 @@ function App() {
           <Card
             variant="outlined"
             sx={{
-              height: "100%",
+              height: "fill-available",
               alignItems: "center",
               backgroundColor: "#FFFDF7",
               display: "flex",
@@ -122,13 +122,13 @@ function App() {
                 backgroundColor: "#E5E5E5",
               }}
             >
-              <img src={Map} alt="Map" height={"90%"} />
+              <img src={Map} alt="Map" height={"95%"} />
             </Grid>
             <Grid item xs={3}>
               <Card
                 variant="outlined"
                 sx={{
-                  height: "100%",
+                  height: "fill-available",
                   backgroundColor: "#FFFDF7",
                 }}
               >
