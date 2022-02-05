@@ -8,7 +8,8 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Map from "../assets/map.svg";
+// import Map from "../assets/map.svg";
+import Map from "../components/Map"
 import Logo from "../assets/logo.svg";
 import "./App.css";
 import { loadCities } from "../utils/loadCities";
@@ -122,7 +123,7 @@ function App() {
                 backgroundColor: "#E5E5E5",
               }}
             >
-              <img src={Map} alt="Map" height={"95%"} />
+              <Map />
             </Grid>
             <Grid item xs={3}>
               <Card
