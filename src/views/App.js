@@ -8,37 +8,49 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Map from "../assets/map.svg";
+import Map from "../components/Map"
 import Logo from "../assets/logo.svg";
 import "./App.css";
 import { loadCities } from "../utils/loadCities";
 
 function App() {
-  const [redeInicial, setRedeInicial] = React.useState(0);
-  const [redeFinal, setRedeFinal] = React.useState(0);
-  const [rota, setRota] = React.useState(
+  const [initialNetwork, setInitialNetwork] = React.useState(0);
+  const [finalNetwork, setFinalNetwork] = React.useState(0);
+  const [route, setRoute] = React.useState(
     "Preencha os dados e encontre uma rota de internet entre as duas cidades!"
   );
   const cities = loadCities();
 
   const handleRedeInicial = (event, newValue) => {
-    setRedeInicial(newValue.id);
+    setInitialNetwork(newValue.id);
   };
 
   const handleRedeFinal = (event, newValue) => {
-    setRedeFinal(newValue.id);
+    setFinalNetwork(newValue.id);
   };
 
   const handlePesquisa = () => {
-    const rotaEncontrada = findRouteBFS(redeInicial, redeFinal)
-    let resultado = ""
+    const spottedRoute = findRouteBFS(initialNetwork, finalNetwork)
+    let result = ""
 
-    resultado += `${rotaEncontrada[0]} `
-    for (let aux = 1; aux < rotaEncontrada.length; aux++)
-      resultado += `► ${rotaEncontrada[aux]}`
-
-    setRota(resultado);
+    result += `${spottedRoute[0]} `
+    for (let aux = 1; aux < spottedRoute.length; aux++){
+      result += `► ${spottedRoute[aux]}`;
+    }
+    
+    setRoute(result);
+    changeRouteColor(spottedRoute);
   };
+
+  function changeRouteColor(newRoute) {
+    console.log(newRoute)
+    document.querySelectorAll(`circle[class="WAN"]`).forEach(el => el.style.fill = "#1495BF")
+    document.querySelectorAll(`circle[class="LAN"]`).forEach(el => el.style.fill = "#00FFD1")
+    document.querySelector(`circle[id="${newRoute[0]}"]`).style.fill = "#FF7B00";
+    document.querySelector(`circle[id="${newRoute[newRoute.length - 1]}"]`).style.fill = "#FF7B00";
+    for(let aux = 1; aux < newRoute.length - 1; aux++)
+      document.querySelector(`circle[id="${newRoute[aux]}"]`).style.fill = "#FFD000";
+  }
 
   return (
     <Box sx={{ width: "100vw", height: "100vh" }}>
@@ -122,7 +134,7 @@ function App() {
                 backgroundColor: "#E5E5E5",
               }}
             >
-              <img src={Map} alt="Map" height={"95%"} />
+              <Map />
             </Grid>
             <Grid item xs={3}>
               <Card
@@ -156,7 +168,7 @@ function App() {
                     justifyContent: "center",
                   }}
                 >
-                  {rota}
+                  {route}
                 </Typography>
               </Card>
             </Grid>
