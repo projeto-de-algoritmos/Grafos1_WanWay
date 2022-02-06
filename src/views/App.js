@@ -43,7 +43,7 @@ function App() {
   };
 
   function changeRouteColor(newRoute) {
-    console.log(newRoute)
+    // console.log(newRoute)
     document.querySelectorAll(`circle[class="WAN"]`).forEach(el => el.style.fill = "#1495BF")
     document.querySelectorAll(`circle[class="LAN"]`).forEach(el => el.style.fill = "#00FFD1")
     document.querySelector(`circle[id="${newRoute[0]}"]`).style.fill = "#FF7B00";
