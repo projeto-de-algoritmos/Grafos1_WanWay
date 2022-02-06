@@ -55,7 +55,7 @@ function App() {
   return (
     <Box sx={{ width: "100vw", height: "100vh" }}>
       <Grid container sx={{ height: "100%" }}>
-        <Grid item xs={2}>
+        <Grid item xs={3}>
           <Card
             variant="outlined"
             sx={{
@@ -116,11 +116,12 @@ function App() {
             </Button>
           </Card>
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={9}>
+          <Box sx={{ height: "100%"}}>
           <Grid
             container
             direction="column"
-            sx={{ height: "100%", justifyContent: "center" }}
+            sx={{ height: "100%"}}
           >
             <Grid
               item
@@ -136,7 +137,7 @@ function App() {
             >
               <Map />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={2}>
               <Card
                 variant="outlined"
                 sx={{
@@ -173,6 +174,7 @@ function App() {
               </Card>
             </Grid>
           </Grid>
+          </Box>
         </Grid>
       </Grid>
     </Box>
