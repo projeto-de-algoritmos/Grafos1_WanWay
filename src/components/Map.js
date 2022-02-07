@@ -5,12 +5,14 @@ import {
   TOOL_NONE,
 } from "react-svg-pan-zoom";
 import {COLORS} from "../assets/colors";
+import { useWindowDimensions } from "../utils/useWindowDimensions";
 
 
 export default function Map(props) {
   const Viewer = useRef(null);
   const [tool, setTool] = useState(TOOL_NONE);
   const [value, setValue] = useState(INITIAL_VALUE);
+  const {height, width} = useWindowDimensions();
 
   useEffect(() => {
     Viewer.current.fitToViewer();
@@ -19,8 +21,8 @@ export default function Map(props) {
   return (
     <ReactSVGPanZoom
       ref = {Viewer}
-      width = {800}
-      height = {600}
+      width = {width}
+      height = {height - 200}
       tool = {tool}
       onChangeTool = {setTool}
       value = {value}
