@@ -1,6 +1,6 @@
 const networkGraph = require("../data/graph.json");
 
-let nodeParents = new Array(26);
+let nodeParents = new Array(50);
 
 export const findRouteBFS = (startLAN, endLAN) => {
   const queue = [];

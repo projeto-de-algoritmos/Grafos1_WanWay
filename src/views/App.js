@@ -12,6 +12,7 @@ import Map from "../components/Map"
 import Logo from "../assets/logo.svg";
 import "./App.css";
 import { loadCities } from "../utils/loadCities";
+import {COLORS} from "../assets/colors";
 
 function App() {
   const [initialNetwork, setInitialNetwork] = React.useState(0);
@@ -21,12 +22,14 @@ function App() {
   );
   const cities = loadCities();
 
-  const handleRedeInicial = (event, newValue) => {
+  const handleRedeInicial = (e, newValue) => {
     setInitialNetwork(newValue.id);
+    console.log(e);
   };
 
-  const handleRedeFinal = (event, newValue) => {
+  const handleRedeFinal = (e, newValue) => {
     setFinalNetwork(newValue.id);
+    console.log(e);
   };
 
   const handlePesquisa = () => {
@@ -44,24 +47,24 @@ function App() {
 
   function changeRouteColor(newRoute) {
     // console.log(newRoute)
-    document.querySelectorAll(`circle[class="WAN"]`).forEach(el => el.style.fill = "#1495BF")
-    document.querySelectorAll(`circle[class="LAN"]`).forEach(el => el.style.fill = "#00FFD1")
-    document.querySelector(`circle[id="${newRoute[0]}"]`).style.fill = "#FF7B00";
-    document.querySelector(`circle[id="${newRoute[newRoute.length - 1]}"]`).style.fill = "#FF7B00";
+    document.querySelectorAll(`circle[class="WAN"]`).forEach(el => el.style.fill = COLORS.lightblue)
+    document.querySelectorAll(`circle[class="LAN"]`).forEach(el => el.style.fill = COLORS.bluegreen)
+    document.querySelector(`circle[id="${newRoute[0]}"]`).style.fill = COLORS.orange;
+    document.querySelector(`circle[id="${newRoute[newRoute.length - 1]}"]`).style.fill = COLORS.orange;
     for(let aux = 1; aux < newRoute.length - 1; aux++)
-      document.querySelector(`circle[id="${newRoute[aux]}"]`).style.fill = "#FFD000";
+      document.querySelector(`circle[id="${newRoute[aux]}"]`).style.fill = COLORS.orangelight;
   }
 
   return (
     <Box sx={{ width: "100vw", height: "100vh" }}>
       <Grid container sx={{ height: "100%" }}>
-        <Grid item xs={3}>
+        <Grid item xs={2.5}>
           <Card
             variant="outlined"
             sx={{
               height: "fill-available",
               alignItems: "center",
-              backgroundColor: "#FFFDF7",
+              backgroundColor: COLORS.beige,
               display: "flex",
               flexDirection: "column",
             }}
@@ -116,7 +119,7 @@ function App() {
             </Button>
           </Card>
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={9.5}>
           <Box sx={{ height: "100%"}}>
           <Grid
             container
@@ -132,7 +135,7 @@ function App() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                backgroundColor: "#E5E5E5",
+                backgroundColor: COLORS.lightgrey,
               }}
             >
               <Map />
@@ -142,7 +145,7 @@ function App() {
                 variant="outlined"
                 sx={{
                   height: "fill-available",
-                  backgroundColor: "#FFFDF7",
+                  backgroundColor: COLORS.beige,
                 }}
               >
                 <Typography
