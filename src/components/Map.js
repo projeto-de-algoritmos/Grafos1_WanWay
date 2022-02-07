@@ -9,7 +9,7 @@ import { useWindowDimensions } from "../utils/useWindowDimensions";
 
 
 export default function Map(props) {
-  const Viewer = useRef(null);
+  const Viewer = useRef();
   const [tool, setTool] = useState(TOOL_NONE);
   const [value, setValue] = useState(INITIAL_VALUE);
   const {height, width} = useWindowDimensions();
@@ -31,8 +31,8 @@ export default function Map(props) {
       SVGBackground = {COLORS.lightgrey}
     >
       <svg
-        width="680"
-        height="600"
+        width={width}
+        height={height - 200}
         viewBox="0 0 680 600"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

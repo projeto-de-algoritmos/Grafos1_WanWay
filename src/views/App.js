@@ -22,12 +22,14 @@ function App() {
   );
   const cities = loadCities();
 
-  const handleRedeInicial = (event, newValue) => {
+  const handleRedeInicial = (e, newValue) => {
     setInitialNetwork(newValue.id);
+    console.log(e);
   };
 
-  const handleRedeFinal = (event, newValue) => {
+  const handleRedeFinal = (e, newValue) => {
     setFinalNetwork(newValue.id);
+    console.log(e);
   };
 
   const handlePesquisa = () => {
@@ -50,13 +52,13 @@ function App() {
     document.querySelector(`circle[id="${newRoute[0]}"]`).style.fill = COLORS.orange;
     document.querySelector(`circle[id="${newRoute[newRoute.length - 1]}"]`).style.fill = COLORS.orange;
     for(let aux = 1; aux < newRoute.length - 1; aux++)
-      document.querySelector(`circle[id="${newRoute[aux]}"]`).style.fill = COLORS.orange;
+      document.querySelector(`circle[id="${newRoute[aux]}"]`).style.fill = COLORS.orangelight;
   }
 
   return (
     <Box sx={{ width: "100vw", height: "100vh" }}>
       <Grid container sx={{ height: "100%" }}>
-        <Grid item xs={3}>
+        <Grid item xs={2.5}>
           <Card
             variant="outlined"
             sx={{
@@ -117,7 +119,7 @@ function App() {
             </Button>
           </Card>
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={9.5}>
           <Box sx={{ height: "100%"}}>
           <Grid
             container
